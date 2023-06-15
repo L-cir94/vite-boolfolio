@@ -47,12 +47,16 @@ export default {
         <div class="container">
             <h1>I miei progetti</h1>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
-                <div class="col" v-for="project in projects">
+                <div class="col" v-for="project in projects.data">
                     <div class="card h-100">
                         <img class="card-img-top" :src="getImages(project.cover_image)" :alt="project.title">
                         <div class="card-body">
                             <h4 class="card-title">{{ project.title }}</h4>
                             <p class="card-text">{{ project.content }}</p>
+                            <span class="badge bg-primary"></span>
+                        </div>
+                        <div class="card-footer">
+                            <a name="" id="" class="btn btn-primary" href="#" role="button">{{ project.repo }}</a>
                         </div>
                     </div>
                 </div>
