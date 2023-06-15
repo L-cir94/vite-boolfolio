@@ -29,10 +29,13 @@ export default {
                     console.log(error);
                     this.error = error.message
                 })
+        },
+        getImages(imagePath) {
+            return this.baseAPI + 'storage/' + imagePath;
         }
     },
     mounted() {
-        const url = this.baseAPI + this.projectPath
+        const url = this.baseAPI +  this.projectPath
         this.getProjects(url)
         /*   console.log(url) */
     }
@@ -46,7 +49,7 @@ export default {
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
                 <div class="col" v-for="project in projects">
                     <div class="card h-100">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="Title">
+                        <img class="card-img-top" :src="getImages(project.cover_image)" :alt="project.title">
                         <div class="card-body">
                             <h4 class="card-title">{{ project.title }}</h4>
                             <p class="card-text">{{ project.content }}</p>
