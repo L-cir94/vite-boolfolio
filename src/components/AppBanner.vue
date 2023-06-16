@@ -9,6 +9,7 @@
                     mix and match with additional component themes and more.</p>
                 <button class="btn btn-outline-primary" type="button">Example button</button> -->
             </div>
+            
         </div>
     </div>
 </div>

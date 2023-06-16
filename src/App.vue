@@ -21,5 +21,10 @@ export default {
 <style lang="scss">
 @use './styles/general.scss';
 
-
+body::-webkit-scrollbar {
+    display: none;
+}
+body{
+    background-color: rgb(252, 241, 241);
+}
 </style>

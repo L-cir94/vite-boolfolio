@@ -61,18 +61,18 @@ export default {
                     <nav aria-label="Page navigation" class="">
                         <ul class="pagination">
                             <li class="page-item">
-                                <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                                <button class="rounded-4 p-2" aria-label="Previous" v-if="projects.prev_page_url"
                                     @click="prevPage(projects.prev_page_url)">
-                                    <span aria-hidden="true">&laquo;</span>
+                                    <span aria-hidden="true">Prev</span>
                                 </button>
                             </li>
-                            <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+<!--                                                     <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li> -->
                             <li class="page-item">
-                                <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                                <button class="rounded-4 p-2" aria-label="Next" v-if="projects.next_page_url"
                                     @click="nextPage(projects.next_page_url)">
-                                    <span aria-hidden="true">&raquo;</span>
+                                    <span aria-hidden="true">Next</span>
                                 </button>
                             </li>
                         </ul>
@@ -92,7 +92,7 @@ export default {
                                     technology.name }}</span>
                             </div>
                             <div class="types">
-                                <span class="badge bg-danger mx-1" v-for="type in project">{{ type.name }}</span>
+                                <span class="badge bg-danger p-2 mx-1" v-for="type in project">{{ type.name }}</span>
                             </div>
                         </div>
                         <div class="card-footer bg-body text-center">
@@ -111,15 +111,16 @@ export default {
                 <nav aria-label="Page navigation" class="">
                     <ul class="pagination">
                         <li class="page-item">
-                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                            <button class="rounded-4 p-2" aria-label="Previous" v-if="projects.prev_page_url"
                                 @click="prevPage(projects.prev_page_url)">
-                                <span aria-hidden="true">&laquo;</span>
+                                <span aria-hidden="true">Prev</span>
                             </button>
                         </li>
+                        
                         <li class="page-item">
-                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                            <button class="rounded-4 p-2" aria-label="Next" v-if="projects.next_page_url"
                                 @click="nextPage(projects.next_page_url)">
-                                <span aria-hidden="true">&raquo;</span>
+                                <span aria-hidden="true">Next</span>
                             </button>
                         </li>
                     </ul>
@@ -146,4 +147,6 @@ span.badge {
 
 a {
     text-decoration: none;
-}</style>
+}
+
+</style>
