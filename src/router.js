@@ -8,22 +8,22 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            'path': '/',/*  point_left: 'http://localhost:5174/home', */
+            'path': '/',
             'name': 'home',
             'component': HomeView
         },
         {
-            'path': '/about', /* point_left: 'http://localhost:5174/about', */
-            'name': 'about Me',
+            'path': '/about', 
+            'name': 'about',
             'component': AboutView
         },
         {
-            'path': '/contacts', /* point_left: 'http://localhost:5174/contacts', */
+            'path': '/contacts', 
             'name': 'contacts',
             'component': ContactsView
         },
         {
-            'path': '/projects', /* point_left: 'http://localhost:5174/projects', */
+            'path': '/projects', 
             'name': 'projects',
             'component': ProjectsView
         }

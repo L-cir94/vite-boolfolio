@@ -54,33 +54,34 @@ export default {
 </script>
 
 <template>
-       <section class="vue-home">
+    <section class="projects">
         <div class="container" v-if="projects">
-            <h1>I miei progetti</h1>
             <div class="row">
-                <nav aria-label="Page navigation">
-                    <ul class="pagination    ">
-                        <li class="page-item">
-                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
-                                @click="prevPage(projects.prev_page_url)">
-                                <span aria-hidden="true">&laquo;</span>
-                            </button>
-                        </li>
-<!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <div class="navbar d-flex justify-content-center">
+                    <nav aria-label="Page navigation" class="">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                                    @click="prevPage(projects.prev_page_url)">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </button>
+                            </li>
+                            <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                        <li class="page-item">
-                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
-                                @click="nextPage(projects.next_page_url)">
-                                <span aria-hidden="true">&raquo;</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
+                            <li class="page-item">
+                                <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                                    @click="nextPage(projects.next_page_url)">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <div v-if="loading === false" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
                 <div class="col" v-for="project in projects.data">
-                    <div class="card h-100 shadow p-4" >
+                    <div class="card h-100 shadow p-2 rounded-5">
                         <img class="card-img-top" width="20" :src="getImages(project.cover_image)" :alt="project.title">
                         <div class="card-body">
                             <h4 class="card-title">{{ project.title }}</h4>
@@ -94,9 +95,9 @@ export default {
 
                             </div>
                             <div class="Types">
-                                <h3>Type</h3>
+                                <h3>Type of project</h3>
                                 <ul>
-                                    <li v-for="types in project.type">{{types.name}}</li>
+                                    <li v-for="types in project.type">{{ types.name }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -110,29 +111,34 @@ export default {
     </section>
     <div class="container" v-if="projects">
         <div class="row">
-            <nav aria-label="Page navigation">
-                    <ul class="pagination    ">
-                        <li class="page-item">
-                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
-                                @click="prevPage(projects.prev_page_url)">
-                                <span aria-hidden="true">&laquo;</span>
-                            </button>
-                        </li>
-<!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+            <div class="navbar d-flex justify-content-center">
+                    <nav aria-label="Page navigation" class="">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                                    @click="prevPage(projects.prev_page_url)">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </button>
+                            </li>
+                            <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                        <li class="page-item">
-                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
-                                @click="nextPage(projects.next_page_url)">
-                                <span aria-hidden="true">&raquo;</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
+                            <li class="page-item">
+                                <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                                    @click="nextPage(projects.next_page_url)">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 
+ul{
+    list-style: none;
+}
 </style>

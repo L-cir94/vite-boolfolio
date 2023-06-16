@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <h1>Homepage</h1>
-    </div>
+<AppBanner title="Homepage"></AppBanner>
 </template>
 
 <script>
+import AppBanner from '../components/AppBanner.vue';
+
 export default {
-    name: 'HomeView'
+    name: "HomeView",
+    components: { AppBanner }
 }
 </script>
 
