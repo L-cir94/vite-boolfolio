@@ -34,16 +34,19 @@ export default {
             return this.baseAPI + 'storage/' + imagePath;
         },
         nextPage(imagePath) {
-            console.log(imagePath);
+            /* console.log(imagePath); */
+            this.getProjects(imagePath)
         },
         prevPage(imagePath) {
-            console.log(imagePath);
+            /* console.log(imagePath); */
+            this.getProjects(imagePath)
         }
     },
     mounted() {
         const url = this.baseAPI + this.projectPath
         this.getProjects(url)
         /*   console.log(url) */
+        
     }
 }
 </script>
@@ -56,7 +59,7 @@ export default {
                 <nav aria-label="Page navigation">
                     <ul class="pagination    ">
                         <li class="page-item">
-                            <button class="page-link" href="#" aria-label="Previous" v-if="projects.prev_page_url"
+                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
                                 @click="prevPage(projects.prev_page_url)">
                                 <span aria-hidden="true">&laquo;</span>
                             </button>
@@ -65,7 +68,7 @@ export default {
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item">
-                            <button class="page-link" href="#" aria-label="Next" v-if="projects.next_page_url"
+                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
                                 @click="nextPage(projects.next_page_url)">
                                 <span aria-hidden="true">&raquo;</span>
                             </button>
@@ -82,8 +85,8 @@ export default {
                             <p class="card-text">{{ project.content }}</p>
                             <span class="badge bg-primary"></span>
                         </div>
-                        <div class="card-footer">
-                            <a name="" id="" class="btn btn-primary" href="#" role="button">{{ project.repo }}</a>
+                        <div class="card-footer text-center">
+                            <a name="" id="" class="" :href="project.repo" target="_blank">{{ project.repo }}</a>
                         </div>
                     </div>
                 </div>
@@ -92,23 +95,25 @@ export default {
     </section>
     <div class="container">
         <div class="row">
-            <nav aria-label="Page navigation">
-                <ul class="pagination    ">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination    ">
+                        <li class="page-item">
+                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                                @click="prevPage(projects.prev_page_url)">
+                                <span aria-hidden="true">&laquo;</span>
+                            </button>
+                        </li>
+                        <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                                @click="nextPage(projects.next_page_url)">
+                                <span aria-hidden="true">&raquo;</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
         </div>
     </div>
 </template>
