@@ -88,17 +88,11 @@ export default {
                             <p class="card-text">{{ reduceText(project.content) }}</p>
                             <span class="badge bg-primary"></span>
                             <div class="Technologies">
-                                <h3>Technologies</h3>
-                                <ul>
-                                    <li v-for="technology in project.technologies">{{ technology.name }}</li>
-                                </ul>
-
+                                <span class="badge mx-1" v-for="technology in project.technologies"> {{
+                                    technology.name }}</span>
                             </div>
                             <div class="Types">
-                                <h3>Type of project</h3>
-                                <ul>
-                                    <li v-for="types in project.type">{{ types.name }}</li>
-                                </ul>
+                                <span class="badge bg-danger mx-1" v-for="type in project">{{ type.name }}</span>
                             </div>
                         </div>
                         <div class="card-footer text-center">
@@ -112,33 +106,32 @@ export default {
     <div class="container" v-if="projects">
         <div class="row">
             <div class="navbar d-flex justify-content-center">
-                    <nav aria-label="Page navigation" class="">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
-                                    @click="prevPage(projects.prev_page_url)">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </button>
-                            </li>
-                            <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <nav aria-label="Page navigation" class="">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <button class="page-link" aria-label="Previous" v-if="projects.prev_page_url"
+                                @click="prevPage(projects.prev_page_url)">
+                                <span aria-hidden="true">&laquo;</span>
+                            </button>
+                        </li>
+                        <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                            <li class="page-item">
-                                <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
-                                    @click="nextPage(projects.next_page_url)">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </button>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                        <li class="page-item">
+                            <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
+                                @click="nextPage(projects.next_page_url)">
+                                <span aria-hidden="true">&raquo;</span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
-ul{
-    list-style: none;
+span.badge {
+    background-color: #00e165;
 }
 </style>
