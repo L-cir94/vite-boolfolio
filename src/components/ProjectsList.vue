@@ -82,28 +82,30 @@ export default {
             <div v-if="loading === false" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
                 <div class="col" v-for="project in projects.data">
                     <div class="card h-100 shadow p-2 rounded-5">
-                        <img class="card-img-top" width="20" :src="getImages(project.cover_image)" :alt="project.title">
-                        <div class="card-body">
+                        <img class="card-img-top rounded-5" :src="getImages(project.cover_image)" :alt="project.title">
+                        <div class="card-body d-flex flex-column">
                             <h4 class="card-title">{{ project.title }}</h4>
                             <p class="card-text">{{ reduceText(project.content) }}</p>
                             <span class="badge bg-primary"></span>
-                            <div class="Technologies">
+                            <div class="technologies">
                                 <span class="badge mx-1" v-for="technology in project.technologies"> {{
                                     technology.name }}</span>
                             </div>
-                            <div class="Types">
+                            <div class="types">
                                 <span class="badge bg-danger mx-1" v-for="type in project">{{ type.name }}</span>
                             </div>
                         </div>
-                        <div class="card-footer text-center">
-                            <a name="" id="" class="" :href="project.repo" target="_blank">{{ project.repo }}</a>
+                        <div class="card-footer bg-body text-center">
+                            <button type="button" target="_blank" class="btn btn-primary rounded-5"><a name="" id=""
+                                    class="text-white" :href="project.repo" target="_blank">Vai alla repo </a></button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="container" v-if="projects">
+    <div class="container mb-5" v-if="projects">
         <div class="row">
             <div class="navbar d-flex justify-content-center">
                 <nav aria-label="Page navigation" class="">
@@ -114,9 +116,6 @@ export default {
                                 <span aria-hidden="true">&laquo;</span>
                             </button>
                         </li>
-                        <!--                         <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
                         <li class="page-item">
                             <button class="page-link" aria-label="Next" v-if="projects.next_page_url"
                                 @click="nextPage(projects.next_page_url)">
@@ -134,4 +133,17 @@ export default {
 span.badge {
     background-color: #00e165;
 }
-</style>
+
+.types {
+    position: absolute;
+    top: 0;
+    margin-top: 1rem;
+}
+
+.btn {
+    background-color: #001533;
+}
+
+a {
+    text-decoration: none;
+}</style>
