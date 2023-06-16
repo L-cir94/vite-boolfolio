@@ -10,10 +10,10 @@ export default {
 <template>
     <header>
         <nav class="nav justify-content-center  ">
-          <a class="nav-link" href="/home" aria-current="page">Home</a>
-          <a class="nav-link" href="/about">About Me</a>
-          <a class="nav-link" href="/contacts">Contacts</a>
-          <a class="nav-link" href="/projects">My Projects</a>
+          <router-link class="nav-link" :to="{'name':'home'}">Home</router-link>
+          <router-link class="nav-link" href="/about">About Me</router-link>
+          <router-link class="nav-link" href="/contacts">Contacts</router-link>
+          <router-link class="nav-link" href="/projects">My Projects</router-link>
         </nav>
     </header>
 <router-view></router-view>
