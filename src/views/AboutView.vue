@@ -1,27 +1,55 @@
 <template>
-<AppBanner title="About Me"></AppBanner>
-<div class="container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
-        <div class="col">
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="Title">
-                <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+    <AppBanner title="About Me"></AppBanner>
+    <div class="container py-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-3 py-4">
+            <div class="col-6">
+                <div class="card shadow rounded-5 ">
+                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Luca Cirigliano</h4>
+                        <p class="card-text">Aspirante WebDeveloper</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card shadow rounded-5 ">
+                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Luca Cirigliano</h4>
+                        <p class="card-text">Aspirante WebDeveloper</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card shadow rounded-5 ">
+                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Luca Cirigliano</h4>
+                        <p class="card-text">Aspirante WebDeveloper</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt="Title">
-                <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Text</p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-2">
+            <div class="col">
+                <div class="card shadow rounded-5 ">
+                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Luca Cirigliano</h4>
+                        <p class="card-text">Aspirante WebDeveloper</p>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card shadow rounded-5 ">
+                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Luca Cirigliano</h4>
+                        <p class="card-text">Aspirante WebDeveloper</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
