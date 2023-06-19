@@ -4,11 +4,11 @@ import ContactsView from './views/ContactsView.vue'
 import ProjectsView from './views/ProjectsView.vue'
 import SingleProject from './components/SingleProject.vue'
 
+
 const router = createRouter({
     history: createWebHistory(),
-    routes: [{
-        'path': '/project'
-    },
+    routes: [
+
     {
         'path': '/about',
         'name': 'about',

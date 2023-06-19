@@ -30,7 +30,6 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-xl-2">
             <div class="col">
                 <div class="card shadow rounded-5 ">
                     <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
@@ -49,7 +48,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>

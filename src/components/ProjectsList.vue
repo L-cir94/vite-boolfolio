@@ -61,7 +61,7 @@ export default {
                     <nav aria-label="Page navigation" class="">
                         <ul class="pagination">
                             <li class="page-item">
-                                <button class="btn rounded-4 p-2" aria-label="Previous" v-if="projects.prev_page_url"
+                                <button class="btn rounded-4 p-2 me-1" aria-label="Previous" v-if="projects.prev_page_url"
                                     @click="prevPage(projects.prev_page_url)">
                                     <span aria-hidden="true">Prev Page</span>
                                 </button>
@@ -79,7 +79,7 @@ export default {
                     </nav>
                 </div>
             </div>
-            <div v-if="projects && !loading" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3">
+            <div v-if="projects" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-3 g-3">
                 <div class="col" v-for="project in projects.data">
                     <div class="card h-100 shadow p-2 rounded-5">
                         <img class="card-img-top rounded-5" :src="getImages(project.cover_image)" :alt="project.title">
@@ -92,7 +92,7 @@ export default {
                                     technology.name }}</span>
                             </div>
                             <div class="types">
-                                <!-- <span class="badge bg-danger p-2 mx-1" v-for="type in project">{{ type.name }}</span> -->
+                                <span class="badge bg-danger p-2 mx-1" v-for="type in project">{{ type.name }}</span>
                             </div>
                         </div>
                         <div class="card-footer text-center">
@@ -114,7 +114,7 @@ export default {
                 <nav aria-label="Page navigation" class="">
                     <ul class="pagination">
                         <li class="page-item">
-                            <button class=" btn rounded-4 p-2" aria-label="Previous" v-if="projects.prev_page_url"
+                            <button class=" btn rounded-4 p-2 me-2" aria-label="Previous" v-if="projects.prev_page_url"
                                 @click="prevPage(projects.prev_page_url)">
                                 <span aria-hidden="true">Prev Page</span>
                             </button>
@@ -148,6 +148,7 @@ span.badge {
     background-color: #001533;
     color: white;
     border: none;
+    
 }
 
 a {
