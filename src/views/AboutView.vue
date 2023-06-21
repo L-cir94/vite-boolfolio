@@ -13,7 +13,7 @@
             </div>
             <div class="col-3">
                 <div class="card shadow rounded-5 ">
-                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <img class="card-img-top rounded-5 shadow p-2" src="" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Luca Cirigliano</h4>
                         <p class="card-text">Aspirante WebDeveloper</p>
@@ -22,7 +22,7 @@
             </div>
             <div class="col-3">
                 <div class="card shadow rounded-5 ">
-                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <img class="card-img-top rounded-5 shadow p-2" src="" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Luca Cirigliano</h4>
                         <p class="card-text">Aspirante WebDeveloper</p>
@@ -32,7 +32,7 @@
         </div>
             <div class="col">
                 <div class="card shadow rounded-5 ">
-                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <img class="card-img-top rounded-5 shadow p-2" src="" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Luca Cirigliano</h4>
                         <p class="card-text">Aspirante WebDeveloper</p>
@@ -40,7 +40,7 @@
                 </div>
             </div><div class="col">
                 <div class="card shadow rounded-5 ">
-                    <img class="card-img-top rounded-5 shadow p-2" src="../assets/img/DALL·E 2023-01-22 19.38.35.png" alt="">
+                    <img class="card-img-top rounded-5 shadow p-2" src="" alt="">
                     <div class="card-body">
                         <h4 class="card-title">Luca Cirigliano</h4>
                         <p class="card-text">Aspirante WebDeveloper</p>

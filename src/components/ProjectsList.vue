@@ -92,8 +92,8 @@ export default {
                                 <span class="badge mx-1" v-for="technology in project.technologies"> {{
                                     technology.name }}</span>
                             </div>
-                            <div class="types" v-if="type">
-                                <span class="badge bg-danger p-2 mx-1" v-for="type in project.type">{{ type.name }}</span>
+                            <div class="types" v-if="project.type">
+                                <span class="badge bg-danger p-2 mx-1" >{{ project.type.name }}</span>
                             </div>
                         </div>
                         <div class="card-footer text-center">
